@@ -30,8 +30,7 @@ pipeline {
         stage('Docker Container Run'){
             steps{
                 sh '''
-                    docker run -d -p ${port}:${port}
-                    --name $CONTAINER_NAME $IMAGE_NAME
+                    docker run -d -p ${port}:${port} --name $CONTAINER_NAME $IMAGE_NAME
                 '''
             }
         }
