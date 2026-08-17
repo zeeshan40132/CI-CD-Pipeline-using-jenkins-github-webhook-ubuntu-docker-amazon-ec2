@@ -37,7 +37,7 @@ pipeline {
         }
         stage('send email notification'){
             steps{
-                emailex(
+                emailext(
                     subject: "NextJS App Deployed successfully on EC2",
                     body: "Your nextjs app is deployed at http://13.53.110.19:3000/",
                     to: "${EMAIL}"
