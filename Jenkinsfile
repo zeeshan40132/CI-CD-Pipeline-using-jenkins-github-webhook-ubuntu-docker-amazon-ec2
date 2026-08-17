@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         CONTAINER_NAME = "nextjs-app"
-        IMAGE_NAME = "nesths-image"
+        IMAGE_NAME = "nestjs-image"
         EMAIL = "zeeshan40132@gmail.com"
         PORT = "3000"
     }
@@ -30,7 +30,7 @@ pipeline {
         stage('Docker Container Run'){
             steps{
                 sh '''
-                    docker run -d -p ${port}:${port} --name $CONTAINER_NAME $IMAGE_NAME
+                    docker run -d -p ${PORT}:${PORT} --name $CONTAINER_NAME $IMAGE_NAME
                 '''
             }
         }
